@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ConsoleUI
@@ -10,10 +11,38 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            /*
-             * Todo: Follow all comments!! 
-             * Double click on the region (gray box) to view all comments
-             */
+
+         List<Vehicle> vehicleLists = new List<Vehicle>();
+
+         var car = new Car();
+         car.Year = 1998;
+         car.Make = "Viper";
+         car.Model = "Dodge";
+
+
+         var motorcycle = new Motorcycle();
+         motorcycle.Year = 1998;
+         motorcycle.Make = "Suzuki";
+         motorcycle.Model = "GXR";
+         
+         vehicleLists.Add(motorcycle);
+         vehicleLists.Add(car);
+         foreach (var vehical in vehicleLists)
+         {
+          Console.WriteLine($"This is my {vehical.Year} {vehical.Make} it's pretty fast."); 
+          Console.WriteLine($"It's my favorite {vehical.Model} that's made.");
+          Console.WriteLine();
+          
+         }
+
+
+
+
+
+         /*
+          * Todo: Follow all comments!!
+          * Double click on the region (gray box) to view all comments
+          */
 
             #region Vehicles
 
@@ -22,7 +51,7 @@ namespace ConsoleUI
              * The vehicle class shall have three string properties: Year, Make, and Model
              * Set the defaults of the properties to something generic in the Vehicle class
              * Vehicle class shall have an abstract method called DriveAbstract with no implementation.
-             * Vehicle class shall have a virtual method called DriveVirtual with a base implementation.
+             * Vehicle class shall have a virtual method called DriveAbstract with a base implementation.
              */
 
             /* 
@@ -33,6 +62,12 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
+            
+            
+             
+            
+            
+            
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
